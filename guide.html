@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>湖南外语导游证备考工具</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background-color: #f0f2f5;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .sidebar {
+            width: 280px;
+            background: #ffffff;
+            padding: 30px 20px;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+            overflow-y: auto;
+        }
+        .sidebar h2 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #333;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        .spot-list {
+            list-style: none;
+        }
+        .spot-list li {
+            margin: 10px 0;
+        }
+        .spot-list button {
+            width: 100%;
+            padding: 12px 15px;
+            background: #f8f9fa;
+            border: none;
+            border-radius: 8px;
+            text-align: left;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .spot-list button:hover {
+            background: #e9ecef;
+        }
+        .spot-list button.active {
+            background: #007bff;
+            color: white;
+        }
+        .lang-switch {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        .content {
+            flex: 1;
+            padding: 40px 60px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .content h1 {
+            font-size: 32px;
+            color: #222;
+            margin-bottom: 30px;
+            border-left: 4px solid #007bff;
+            padding-left: 15px;
+        }
+        .guide-text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #444;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .highlight {
+            color: #007bff;
+            font-weight: bold;
+        }
+        .copy-btn {
+            margin-top: 20px;
+            align-self: flex-start;
+            padding: 10px 20px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .copy-btn:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>湖南景点菜单</h2>
+        <ul class="spot-list">
+            <li><button data-spot="zhangjiajie" class="active">张家界</button></li>
+            <li><button data-spot="fenghuang">凤凰古城</button></li>
+            <li><button data-spot="shaoshan">韶山</button></li>
+            <li><button data-spot="hengshan">衡山</button></li>
+            <li><button data-spot="yueyang">岳阳楼</button></li>
+            <li><button data-spot="yuelu">岳麓山</button></li>
+        </ul>
+        <div class="lang-switch">
+            <button onclick="switchLang('zh')" style="padding:8px 16px; margin:5px; border:none; border-radius:5px; cursor:pointer;">中文</button>
+            <button onclick="switchLang('en')" style="padding:8px 16px; margin:5px; border:none; border-radius:5px; cursor:pointer; background:#007bff; color:white;">英文</button>
+        </div>
+    </div>
+    <div class="content">
+        <h1 id="spot-title">张家界</h1>
+        <div id="guide-content" class="guide-text">
+            请从左侧选择一个景点开始学习...
+        </div>
+        <button class="copy-btn" onclick="copyText()">复制文本</button>
+    </div>
+    <script>
+        const spotData = {
+            zhangjiajie: {
+                zh: "张家界国家森林公园是中国第一个国家森林公园，也是世界自然遗产。这里以独特的石英砂岩峰林地貌闻名，三千奇峰拔地而起，形态各异。电影《阿凡达》的哈利路亚山原型就在这里。",
+                en: "Zhangjiajie National Forest Park is China's first national forest park and a World Natural Heritage site. It is famous for its unique quartz sandstone peak forest landform, with 3,000 towering peaks rising from the ground in various shapes. The Hallelujah Mountains in the movie <i>Avatar</i> were inspired by this landscape."
+            },
+            fenghuang: {
+                zh: "凤凰古城始建于清康熙年间，已有300多年历史。古城依山傍水，沱江穿城而过，吊脚楼错落有致。这里是苗族、土家族等少数民族聚居地，保留了完好的明清建筑和淳朴的民俗风情。",
+                en: "Fenghuang Ancient Town was built during the reign of Emperor Kangxi in the Qing Dynasty and has a history of over 300 years. The town is backed by mountains and beside the Tuojiang River, with stilted buildings scattered along the river. It is home to ethnic minorities such as the Miao and Tujia people, retaining well-preserved Ming and Qing architecture and simple folk customs."
+            },
+            shaoshan: {
+                zh: "韶山是中国人民的伟大领袖毛泽东同志的故乡。这里不仅是全国著名的革命纪念地，也是国家5A级旅游景区。韶山主要包括毛泽东同志故居、毛泽东纪念馆、韶山烈士陵园等景点。",
+                en: "Shaoshan is the hometown of Comrade Mao Zedong, the great leader of the Chinese people. It is not only a famous revolutionary memorial site in China but also a national 5A-level tourist attraction. Major attractions in Shaoshan include the Former Residence of Mao Zedong, the Mao Zedong Memorial Hall, and the Shaoshan Martyrs' Cemetery."
+            },
+            hengshan: {
+                zh: "衡山是中国“五岳”之一，被誉为“南岳”。衡山自然风光秀丽，森林覆盖率高，素有“南岳独秀”的美誉。同时，衡山也是道教主流全真派圣地，宗教文化浓厚。",
+                en: "Mount Heng is one of China's Five Great Mountains, known as the 'Southern Mountain'. It boasts beautiful natural scenery and a high forest coverage rate, renowned as 'the most delicate among the Five Great Mountains'. Additionally, it is the sacred place of Quanzhen School, the main sect of Taoism, with a strong religious culture."
+            },
+            yueyang: {
+                zh: "岳阳楼位于湖南岳阳古城西门城墙之上，下瞰洞庭湖，前望君山，自古有“洞庭天下水，岳阳天下楼”之美誉。与江西南昌滕王阁、湖北武汉黄鹤楼并称为“江南三大名楼”。",
+                en: "Yueyang Tower is located on the west city wall of Yueyang City, Hunan Province, overlooking Dongting Lake and Junshan Island. It has long been praised as 'the best water under heaven is Dongting, and the best tower under heaven is Yueyang'. Together with Tengwang Pavilion in Nanchang and Yellow Crane Tower in Wuhan, it is known as one of the 'Three Great Towers South of the Yangtze River'."
+            },
+            yuelu: {
+                zh: "岳麓山位于长沙市区湘江西岸，是南岳衡山72峰之一。山上有中国古代四大书院之首的岳麓书院，还有爱晚亭、麓山寺等名胜古迹。是集自然风光与人文景观于一体的旅游胜地。",
+                en: "Yuelu Mountain is located on the west bank of the Xiangjiang River in Changsha City, and is one of the 72 peaks of the Southern Mountain Hengshan. On the mountain, there is Yuelu Academy, the top among the four major ancient academies in ancient China, as well as scenic spots and historic sites such as Aiwan Pavilion and Lushan Temple. It is a tourist resort integrating natural scenery and cultural landscapes."
+            }
+        };
+        let currentLang = 'en';
+        let currentSpot = 'zhangjiajie';
+        updateContent();
+        document.querySelectorAll('.spot-list button').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.spot-list button').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                currentSpot = this.dataset.spot;
+                updateContent();
+            });
+        });
+        function switchLang(lang) {
+            currentLang = lang;
+            document.querySelectorAll('.lang-switch button').forEach(b => {
+                b.style.background = '';
+                b.style.color = '';
+            });
+            event.target.style.background = '#007bff';
+            event.target.style.color = 'white';
+            updateContent();
+        }
+        function updateContent() {
+            const titleEl = document.getElementById('spot-title');
+            const contentEl = document.getElementById('guide-content');
+            const data = spotData[currentSpot];
+            const spotNames = {
+                zhangjiajie: currentLang === 'en' ? 'Zhangjiajie' : '张家界',
+                fenghuang: currentLang === 'en' ? 'Fenghuang Ancient Town' : '凤凰古城',
+                shaoshan: currentLang === 'en' ? 'Shaoshan' : '韶山',
+                hengshan: currentLang === 'en' ? 'Mount Heng' : '衡山',
+                yueyang: currentLang === 'en' ? 'Yueyang Tower' : '岳阳楼',
+                yuelu: currentLang === 'en' ? 'Yuelu Mountain' : '岳麓山'
+            };
+            titleEl.innerText = spotNames[currentSpot];
+            contentEl.innerHTML = data[currentLang];
+            if (currentLang === 'en') {
+                const highlights = ['Avatar', 'Hallelujah', 'stilted buildings', 'Yuelu Academy'];
+                highlights.forEach(word => {
+                    const regex = new RegExp(word, 'gi');
+                    contentEl.innerHTML = contentEl.innerHTML.replace(regex, '<span class="highlight">$&</span>');
+                });
+            }
+        }
+        function copyText() {
+            const text = document.getElementById('guide-content').innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                alert('✅ 复制成功！可以去背诵或翻译啦！');
+            }).catch(err => {
+                console.error('复制失败: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
