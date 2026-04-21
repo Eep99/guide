@@ -3,297 +3,727 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2026湖南英语导游证·完整版备考包</title>
+<title>2026湖南英语导游证 | 终极通关题库（笔试+面试全覆盖）</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:"PingFang SC","Microsoft YaHei",sans-serif}
-body{background:#f7f8fa;display:flex;height:100vh;overflow:hidden}
-.sidebar{width:300px;background:#fff;padding:26px;box-shadow:0 0 12px rgba(0,0,0,0.05);overflow-y:auto}
-.sidebar h2{font-size:17px;margin-bottom:18px;color:#222;border-left:4px solid #007bff;padding-left:10px}
-.menu-list{list-style:none}
-.menu-list li{margin-bottom:8px}
-.menu-list button{width:100%;padding:12px 14px;background:#f5f7fa;border:none;border-radius:10px;text-align:left;font-size:14px;cursor:pointer}
-.menu-list button:hover{background:#eef2f7}
-.menu-list button.active{background:#007bff;color:#fff}
-.audio-box{margin-top:24px;padding-top:20px;border-top:1px solid #eee}
-.audio-box button{padding:10px 14px;margin:4px;border:none;border-radius:8px;background:#007bff;color:white;cursor:pointer}
-.audio-box .stop{background:#fa4d56}
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"PingFang SC","Microsoft YaHei",sans-serif}
+body{background:#f8f9fc;display:flex;height:100vh;overflow:hidden}
+.sidebar{width:320px;background:#fff;padding:24px;box-shadow:0 0 12px rgba(0,0,0,0.05);overflow-y:auto}
+.sidebar h2{font-size:16px;margin-bottom:16px;color:#222;border-left:4px solid #2563eb;padding-left:10px}
+.menu{list-style:none}
+.menu li{margin-bottom:8px}
+.menu button{width:100%;padding:11px 14px;background:#f1f5f9;border:none;border-radius:10px;text-align:left;font-size:14px;cursor:pointer}
+.menu button:hover{background:#e2e8f0}
+.menu button.active{background:#2563eb;color:#fff}
+.tools{margin-top:24px;padding-top:20px;border-top:1px solid #eee}
+.tools button{padding:9px 12px;margin:4px 2px;border:none;border-radius:8px;background:#2563eb;color:white;cursor:pointer}
+.tools .stop{background:#ef4444}
+.tools .loop{background:#10b981}
+.tools .mode{background:#64748b}
 .speed{margin-top:10px;text-align:center}
-.speed button{background:#888;padding:6px 10px;font-size:12px}
+.speed button{background:#94a3b8;padding:5px 8px;font-size:12px}
+.ctrl{margin-top:12px;text-align:center}
+.ctrl button{background:#475569;padding:6px 9px;font-size:12px;margin:2px}
 .content{flex:1;padding:40px 50px;overflow-y:auto}
-.content h1{font-size:24px;margin-bottom:24px;color:#222}
-.content h3{margin:22px 0 10px;color:#007bff}
-.card{background:#fff;padding:26px 30px;border-radius:14px;box-shadow:0 2px 12px rgba(0,0,0,0.04);margin-bottom:20px}
-.card p{line-height:1.8;margin-bottom:14px}
-.card ul{margin-left:20px;line-height:1.8;margin-bottom:14px}
-hr{border:none;border-top:1px solid #eee;margin:20px 0}
-.copy-btn{padding:10px 20px;background:#24c164;color:white;border:none;border-radius:10px;cursor:pointer}
+.title{font-size:22px;margin-bottom:24px;color:#111}
+.card{background:#fff;padding:30px;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.04);margin-bottom:20px}
+.line{display:flex;gap:16px;align-items:flex-start;padding:12px 10px;border-radius:10px;margin:4px 0}
+.line .zh{flex:1;line-height:1.7;color:#334155}
+.line .en{flex:1;line-height:1.7;color:#0f172a}
+.line.active{background:#dbeafe}
+.en.hide{color:transparent;text-shadow:0 0 8px #94a3b8}
+.zh.hide{color:transparent;text-shadow:0 0 8px #94a3b8}
+.qa p{line-height:1.8;padding:8px 12px;border-radius:8px;margin:4px 0}
+.qa p.active{background:#dbeafe}
+/* 题库样式 */
+.question{padding:16px;border:1px solid #e2e8f0;border-radius:12px;margin-bottom:16px}
+.question p{margin-bottom:12px;font-weight:500}
+.option{padding:8px 12px;border-radius:8px;margin:4px 0;cursor:pointer;border:1px solid #e2e8f0}
+.option:hover{background:#f1f5f9}
+.option.correct{background:#dcfce7;border-color:#22c55e;color:#166534}
+.option.wrong{background:#fee2e2;border-color:#ef4444;color:#b91c1c}
+.answer-hint{margin-top:12px;padding:10px;border-radius:8px;background:#f1f5f9;color:#475569}
+.btn-next{margin-top:16px;padding:10px 20px;background:#2563eb;color:white;border:none;border-radius:8px;cursor:pointer}
+/* 导游词/问答切换 */
+.tab{display:flex;gap:8px;margin-bottom:20px}
+.tab button{padding:8px 16px;border:none;border-radius:8px;background:#f1f5f9;cursor:pointer}
+.tab button.active{background:#2563eb;color:white}
 </style>
 </head>
 <body>
 
 <div class="sidebar">
-  <h2>备考目录</h2>
-  <ul class="menu-list">
-    <li><button data-page="written" class="active">笔试高频考点</button></li>
-    <li><button data-page="shaoshan">韶山导游词</button></li>
-    <li><button data-page="zhangjiajie">张家界导游词</button></li>
-    <li><button data-page="hengshan">南岳衡山导游词</button></li>
-    <li><button data-page="yueyang">岳阳楼导游词</button></li>
-    <li><button data-page="fenghuang">凤凰古城导游词</button></li>
-    <li><button data-page="interview">面试英文问答</button></li>
+  <h2>学习菜单（全覆盖）</h2>
+  <ul class="menu">
+    <!-- 10篇导游词 -->
+    <li><button data-page="shaoshan" class="active">1. 韶山导游词</button></li>
+    <li><button data-page="zhangjiajie">2. 张家界导游词</button></li>
+    <li><button data-page="hengshan">3. 南岳衡山导游词</button></li>
+    <li><button data-page="yueyang">4. 岳阳楼导游词</button></li>
+    <li><button data-page="fenghuang">5. 凤凰古城导游词</button></li>
+    <li><button data-page="yuelu">6. 岳麓山导游词</button></li>
+    <li><button data-page="juzizhou">7. 橘子洲导游词</button></li>
+    <li><button data-page="dongjiang">8. 东江湖导游词</button></li>
+    <li><button data-page="ziquejie">9. 紫鹊界梯田导游词</button></li>
+    <li><button data-page="museum">10. 省博物馆导游词</button></li>
+    <!-- 面试50题 -->
+    <li><button data-page="interview">面试问答50题（模板+题库）</button></li>
+    <!-- 笔试4科黄金关键词+题库 -->
+    <li><button data-page="written-key">笔试4科黄金关键词</button></li>
+    <li><button data-page="written-test">笔试题库（选择题+判断题）</button></li>
+    <!-- 高频词汇 -->
     <li><button data-page="words">高频口译词汇</button></li>
   </ul>
 
-  <div class="audio-box">
-    <button onclick="play()">▶ 播放英文</button>
+  <div class="tools">
+    <button onclick="play()">▶ 播放</button>
     <button onclick="stop()" class="stop">⏹ 停止</button>
+    <button onclick="toggleLoop()" class="loop">🔁 循环</button>
+    <div class="ctrl">
+      <button onclick="toggleZH()">显示/隐藏中文</button>
+      <button onclick="toggleEN()">显示/隐藏英文</button>
+      <button onclick="randomQuestion()">🎲 随机抽题</button>
+    </div>
     <div class="speed">
-      <button onclick="speed(0.8)">慢速</button>
-      <button onclick="speed(1)">正常</button>
-      <button onclick="speed(1.2)">快速</button>
+      <button onclick="setSpeed(0.7)">🐌慢速</button>
+      <button onclick="setSpeed(1)">✅正常</button>
+      <button onclick="setSpeed(1.3)">⚡快速</button>
     </div>
   </div>
-</div>
+</body>
 
 <div class="content">
-  <div id="view"></div>
+  <div id="app"></div>
 </div>
 
 <script>
+// 核心数据（全部升级：10篇导游词、50道面试题、笔试关键词+题库）
 const data = {
-written:`<h1>笔试4科·极简高频考点</h1><div class="card">
-<h3>1. 政策与法律法规</h3>
-<ul>
-<li>核心法律：《旅游法》《导游管理办法》</li>
-<li>必背：导游不得擅自变更行程、不得强迫购物；游客投诉时效90天；旅游安全优先</li>
-<li>记关键词：罚款、禁止行为、权责划分</li>
-</ul>
+  // 一、10篇导游词（中英文逐句对照，新增5篇）
+  shaoshan:{
+    type:"dual",
+    title:"1. Shaoshan – Mao Zedong’s Former Residence",
+    lines:[
+      {zh:"各位游客，欢迎来到韶山，这里是毛泽东主席的故乡，也是中国红色旅游的圣地。",en:"Dear guests, welcome to Shaoshan, the birthplace of Chairman Mao Zedong and the holy land of red tourism in China."},
+      {zh:"韶山位于湖南省湘潭市，以毛泽东同志故居为核心景点。",en:"Shaoshan is located in Xiangtan City, Hunan Province, with Mao Zedong's Former Residence as the core attraction."},
+      {zh:"这是一座典型的中国南方乡村民居，内部陈列着当年使用的家具与生活用品。",en:"It is a typical southern Chinese rural house, with furniture and daily items used back then displayed inside."},
+      {zh:"我们还将参观毛泽东同志纪念馆，馆内珍藏着大量珍贵图片与文物。",en:"We will also visit the Mao Zedong Memorial Hall, which houses a large number of precious pictures and cultural relics."},
+      {zh:"韶山不仅是一处历史之地，更是一种精神的象征，提醒我们珍惜和平、铭记先辈。",en:"Shaoshan is not only a place of history, but also a symbol of spirit, reminding us to cherish peace and remember the pioneers."},
+      {zh:"感谢大家的聆听。",en:"Thank you for listening."}
+    ]
+  },
+  zhangjiajie:{
+    type:"dual",
+    title:"2. Zhangjiajie",
+    lines:[
+      {zh:"各位游客，今天我们将要游览的是世界自然遗产、世界地质公园——张家界。",en:"Dear guests, today we will visit Zhangjiajie, a World Natural Heritage and World Geopark."},
+      {zh:"张家界以独特的石英砂岩峰林地貌闻名于世，素有‘奇峰三千’的美誉。",en:"Zhangjiajie is famous for its unique quartz sandstone peak forest landform, known as 'Three Thousand Peaks'."},
+      {zh:"这里的山峰陡峭挺拔，直插云霄，宛如仙境，也曾为电影《阿凡达》提供灵感。",en:"The steep and tall peaks here rise straight into the sky like a fairyland, and inspired the movie Avatar."},
+      {zh:"我们将游览天门山、金鞭溪等景点，欣赏森林、溪流与云海风光。",en:"We will visit Tianmen Mountain, Golden Whip Stream and other spots to enjoy forests, streams and clouds."},
+      {zh:"张家界也是土家族聚居地，拥有丰富的民俗文化与歌舞艺术。",en:"Zhangjiajie is also home to the Tujia ethnic group, with rich folk culture, songs and dances."},
+      {zh:"相信大家一定会爱上这片神奇秀美的土地。",en:"I believe you will deeply love this magical and beautiful land."}
+    ]
+  },
+  hengshan:{
+    type:"dual",
+    title:"3. Mount Heng (Southern Sacred Mountain)",
+    lines:[
+      {zh:"各位游客，我们现在来到的是中国五岳之一的南岳衡山。",en:"Dear guests, we are now at Mount Heng, one of China’s Five Great Mountains, known as the Southern Sacred Mountain."},
+      {zh:"衡山位于湖南省衡阳市，风光秀丽，气候温和，四季宜人。",en:"Mount Heng is located in Hengyang City, Hunan Province, with beautiful scenery and mild climate."},
+      {zh:"这里宗教文化深厚，拥有众多历史悠久的佛教和道教宫观。",en:"It has profound religious culture, with many ancient Buddhist and Taoist temples."},
+      {zh:"祝融峰是衡山最高峰，登顶可俯瞰群山与云海。",en:"Zhurong Peak is the highest point of Mount Heng, where you can overlook mountains and clouds."},
+      {zh:"千百年来，无数文人墨客来此登山赏景、祈福许愿。",en:"For thousands of years, countless scholars and visitors came here to climb, enjoy scenery and pray."},
+      {zh:"希望大家能感受衡山的宁静与神圣。",en:"I hope you can feel the peace and sacredness of Mount Heng."}
+    ]
+  },
+  yueyang:{
+    type:"dual",
+    title:"4. Yueyang Tower",
+    lines:[
+      {zh:"各位游客，我们现在来到的是江南三大名楼之一——岳阳楼。",en:"Dear guests, we are now at Yueyang Tower, one of the Three Great Towers south of the Yangtze River."},
+      {zh:"岳阳楼临洞庭湖而建，楼体造型古朴典雅，气势雄伟。",en:"Yueyang Tower is built beside Dongting Lake, with simple and elegant architecture and grand momentum."},
+      {zh:"它因北宋文学家范仲淹的《岳阳楼记》名扬天下。",en:"It is famous for *Memorial to Yueyang Tower* by Fan Zhongyan in the Northern Song Dynasty."},
+      {zh:"文中‘先天下之忧而忧，后天下之乐而乐’成为千古名句。",en:"The famous sentence 'Be the first to worry about the country, and the last to enjoy happiness' has been passed down for centuries."},
+      {zh:"站在楼上，可远眺洞庭湖水天一色的美景。",en:"Standing on the tower, you can overlook the beautiful scenery of Dongting Lake where water and sky meet."},
+      {zh:"感谢大家的参观。",en:"Thank you for your visit."}
+    ]
+  },
+  fenghuang:{
+    type:"dual",
+    title:"5. Fenghuang Ancient Town",
+    lines:[
+      {zh:"各位游客，欢迎来到风景如画的湘西凤凰古城。",en:"Dear guests, welcome to the picturesque Fenghuang Ancient Town in western Hunan."},
+      {zh:"古城依山傍水，沱江穿城而过，吊脚楼沿河而建，风貌独特。",en:"The ancient town is surrounded by mountains and rivers, with the Tuojiang River running through it and unique stilted buildings along the river."},
+      {zh:"这里是苗族、土家族等少数民族聚居地，民俗风情浓郁。",en:"It is inhabited by ethnic groups such as the Miao and Tujia, with rich folk customs."},
+      {zh:"古城街巷古朴，小桥流水，充满文艺气息与历史韵味。",en:"The ancient streets, small bridges and flowing water are full of artistic and historical charm."},
+      {zh:"著名作家沈从文先生的《边城》让凤凰古城闻名世界。",en:"The famous writer Shen Congwen's *Border Town* made Fenghuang Ancient Town world-famous."},
+      {zh:"希望大家在这里度过一段愉快难忘的时光。",en:"I hope you will have a pleasant and unforgettable time here."}
+    ]
+  },
+  yuelu:{
+    type:"dual",
+    title:"6. Yuelu Mountain",
+    lines:[
+      {zh:"各位游客，欢迎来到长沙岳麓山，这里是集自然风光与人文底蕴于一体的名胜古迹。",en:"Dear guests, welcome to Yuelu Mountain in Changsha, a scenic spot integrating natural scenery and cultural heritage."},
+      {zh:"岳麓山位于湘江之畔，是南岳七十二峰之一，海拔300.8米。",en:"Yuelu Mountain is located beside the Xiangjiang River, one of the 72 peaks of Mount Heng, with an altitude of 300.8 meters."},
+      {zh:"这里最著名的是千年学府岳麓书院，是中国古代四大书院之一。",en:"The most famous place here is Yuelu Academy, one of the four famous ancient academies in China with a history of thousands of years."},
+      {zh:"我们还将参观爱晚亭，它因杜牧‘停车坐爱枫林晚’的诗句而闻名。",en:"We will also visit Aiwan Pavilion, which is famous for Du Mu's poem 'Stopping the carriage to admire the maple forest at dusk'."},
+      {zh:"岳麓山还是革命圣地，许多革命志士曾在此活动，留下珍贵遗迹。",en:"Yuelu Mountain is also a revolutionary holy land, where many revolutionaries once carried out activities and left precious relics."},
+      {zh:"希望大家能感受岳麓山的书香与灵气。",en:"I hope you can feel the scholarly atmosphere and vitality of Yuelu Mountain."}
+    ]
+  },
+  juzizhou:{
+    type:"dual",
+    title:"7. Orange Isle (Juzizhou)",
+    lines:[
+      {zh:"各位游客，欢迎来到橘子洲，它是世界上最大的内陆洲，位于长沙湘江中心。",en:"Dear guests, welcome to Orange Isle, the world's largest inland island located in the center of the Xiangjiang River in Changsha."},
+      {zh:"橘子洲全长约5公里，宽约140米，因盛产橘子而得名。",en:"Orange Isle is about 5 kilometers long and 140 meters wide, named after its abundant oranges."},
+      {zh:"这里最标志性的景点是毛泽东青年艺术雕塑，高达32米，栩栩如生。",en:"The most iconic attraction here is the Mao Zedong Youth Art Sculpture, which is 32 meters high and lifelike."},
+      {zh:"漫步橘子洲，可欣赏湘江两岸的城市风光，感受长沙的活力与魅力。",en:"Walking on Orange Isle, you can enjoy the urban scenery on both sides of the Xiangjiang River and feel the vitality and charm of Changsha."},
+      {zh:"每到秋天，橘子洲的枫叶红遍，成为长沙最热门的赏秋胜地。",en:"Every autumn, the maple leaves on Orange Isle turn red, becoming the most popular autumn scenic spot in Changsha."},
+      {zh:"祝愿大家在橘子洲度过一段轻松愉快的时光。",en:"I wish you a relaxed and pleasant time on Orange Isle."}
+    ]
+  },
+  dongjiang:{
+    type:"dual",
+    title:"8. Dongjiang Lake",
+    lines:[
+      {zh:"各位游客，欢迎来到东江湖，它是国家5A级景区，也是湖南最美的湖泊之一。",en:"Dear guests, welcome to Dongjiang Lake, a national 5A-level scenic spot and one of the most beautiful lakes in Hunan."},
+      {zh:"东江湖位于郴州市资兴市，湖面面积达160平方公里，水质达到国家一级饮用水标准。",en:"Dongjiang Lake is located in Zixing City, Chenzhou City, with a surface area of 160 square kilometers and water quality meeting national first-class drinking water standards."},
+      {zh:"这里最著名的景观是‘雾漫小东江’，清晨时分，薄雾缭绕，宛如仙境。",en:"The most famous scenery here is 'Misty Xiaodongjiang' — in the early morning, mist lingers, like a fairyland."},
+      {zh:"我们将乘船游览东江湖，欣赏两岸的青山绿水，感受大自然的宁静与壮美。",en:"We will take a boat to tour Dongjiang Lake, enjoy the green mountains and clear waters on both sides, and feel the tranquility and grandeur of nature."},
+      {zh:"东江湖还是著名的‘东江鱼’产地，大家可以品尝到新鲜美味的湖鲜。",en:"Dongjiang Lake is also a famous producer of 'Dongjiang Fish', and you can taste fresh and delicious lake fish here."},
+      {zh:"希望大家能沉醉在东江湖的美景之中。",en:"I hope you can be intoxicated by the beautiful scenery of Dongjiang Lake."}
+    ]
+  },
+  ziquejie:{
+    type:"dual",
+    title:"9. Ziquejie Terraced Fields",
+    lines:[
+      {zh:"各位游客，欢迎来到紫鹊界梯田，它是全球重要农业文化遗产，拥有两千多年历史。",en:"Dear guests, welcome to Ziquejie Terraced Fields, an important global agricultural cultural heritage with a history of more than 2,000 years."},
+      {zh:"紫鹊界梯田位于娄底市新化县，总面积达8万亩，层层叠叠，气势磅礴。",en:"Ziquejie Terraced Fields are located in Xinhua County, Loudi City, with a total area of 80,000 mu, overlapping layers and magnificent momentum."},
+      {zh:"它最神奇的地方是‘无坝引水’，依靠天然地形，实现自流灌溉，无需人工修建堤坝。",en:"Its most magical feature is 'damless water diversion' — relying on natural terrain to achieve self-flow irrigation without manual dams."},
+      {zh:"每到春耕时节，梯田灌满水，波光粼粼，宛如大地的调色盘。",en:"Every spring ploughing season, the terraced fields are filled with water, sparkling like a palette of the earth."},
+      {zh:"这里还是梅山文化的发源地之一，保留着浓郁的民俗风情和传统农耕文化。",en:"It is also one of the birthplaces of Meishan culture, retaining rich folk customs and traditional farming culture."},
+      {zh:"希望大家能感受这份古老农耕文明的魅力。",en:"I hope you can feel the charm of this ancient agricultural civilization."}
+    ]
+  },
+  museum:{
+    type:"dual",
+    title:"10. Hunan Provincial Museum",
+    lines:[
+      {zh:"各位游客，欢迎来到湖南省博物馆，它是湖南省最大的综合性博物馆，也是国家一级博物馆。",en:"Dear guests, welcome to Hunan Provincial Museum, the largest comprehensive museum in Hunan Province and a national first-class museum."},
+      {zh:"博物馆馆藏文物超过18万件，涵盖了从远古到近代的各类文物。",en:"The museum has more than 180,000 cultural relics in its collection, covering various types of cultural relics from ancient times to modern times."},
+      {zh:"这里最著名的展品是马王堆汉墓出土的文物，包括辛追夫人遗体、素纱襌衣等国宝。",en:"The most famous exhibits here are the cultural relics unearthed from the Mawangdui Han Tombs, including the body of Lady Xin Zhui and the silk garment with plain yarn."},
+      {zh:"我们将依次参观远古湖南、商周青铜器、秦汉文物、明清书画等展厅。",en:"We will visit the exhibition halls of Ancient Hunan, Shang and Zhou Bronze Ware, Qin and Han Cultural Relics, Ming and Qing Calligraphy and Painting in turn."},
+      {zh:"通过这些文物，我们可以了解湖南的历史文化发展脉络，感受湖湘文化的深厚底蕴。",en:"Through these cultural relics, we can understand the historical and cultural development of Hunan and feel the profound heritage of Huxiang culture."},
+      {zh:"感谢大家的参观，希望大家有所收获。",en:"Thank you for your visit, and I hope you have gained something."}
+    ]
+  },
 
-<h3>2. 导游业务</h3>
-<ul>
-<li>全流程：接站→核对信息→入住→行程→送站</li>
-<li>高频应急：游客生病、走失、物品丢失的标准处理流程</li>
-</ul>
+  // 二、面试问答50题（新增20题，分场景，可随机抽题）
+  interview:{
+    type:"qa",
+    title:"面试英文问答50题（必背模板+随机抽题）",
+    lines:[
+      // 欢迎与欢送（3题，原有）
+      "1. Good morning/afternoon, dear guests. Welcome to Hunan. I’m your tour guide today.",
+      "2. I hope you have a wonderful and safe trip in Hunan.",
+      "3. Thank you for your support and understanding. Wish you a pleasant journey home.",
+      // 景点介绍（3题，原有）
+      "4. This is one of the most famous scenic spots in Hunan.",
+      "5. It has a long history and rich culture.",
+      "6. It is famous for its beautiful natural scenery.",
+      // 行程与服务（4题，原有）
+      "7. Today we will visit several places. Please follow me.",
+      "8. Please stay together and do not leave the group alone.",
+      "9. If you have any questions, you can ask me at any time.",
+      "10. Please take care of your belongings.",
+      // 餐饮住宿（3题，原有）
+      "11. We will have lunch at a local restaurant.",
+      "12. The hotel is clean and comfortable.",
+      "13. If you need any help, please call me.",
+      // 安全与应急（4题，原有）
+      "14. Please pay attention to your safety.",
+      "15. Please be careful when you walk on the road.",
+      "16. Don’t worry. I will help you.",
+      "17. Please stay calm. I will call for help.",
+      // 文化与风俗（3题，原有）
+      "18. This is a traditional Chinese custom.",
+      "19. Local people are very friendly and warm.",
+      "20. It shows the wisdom of local people.",
+      // 湖南特色（3题，原有）
+      "21. Hunan is famous for red tourism.",
+      "22. Hunan food is a little spicy but very delicious.",
+      "23. Hunan has many beautiful mountains and rivers.",
+      // 常用应答（7题，原有）
+      "24. Thank you for your question.",
+      "25. Let me tell you about it.",
+      "26. That’s a good question.",
+      "27. I’m glad you like it.",
+      "28. Hope you have a good time.",
+      "29. See you next time.",
+      "30. Welcome to Hunan again.",
+      // 新增20题（覆盖高频场景）
+      "31. I’m sorry for the inconvenience. I will solve it right away.",
+      "32. The opening time of this scenic spot is from 8:00 to 17:00.",
+      "33. The entrance ticket is 100 yuan per person, and students can get a discount.",
+      "34. You can take photos here, but please do not touch the cultural relics.",
+      "35. If you feel unwell, please tell me immediately. I will take you to the hospital.",
+      "36. The local specialty here is Hunan preserved meat and spicy tofu.",
+      "37. We will gather at the gate of the scenic spot at 3 o’clock in the afternoon.",
+      "38. This building was built in the Ming Dynasty, with a history of more than 500 years.",
+      "39. I will introduce the scenic spot in detail for you.",
+      "40. Please do not litter. Let’s protect the environment together.",
+      "41. The bus will wait for us at the parking lot. Please don’t be late.",
+      "42. Hunan is also known as ‘Xiang’, with a long history of more than 3,000 years.",
+      "43. If you want to buy souvenirs, I can take you to a local store with good quality and reasonable price.",
+      "44. The weather today is sunny, but it will be cool in the evening. Please take more clothes.",
+      "45. This scenic spot is a World Heritage Site, which is very precious.",
+      "46. I have been a tour guide for 3 years. I am familiar with all scenic spots in Hunan.",
+      "47. Please follow the rules of the scenic spot and do not climb the railings.",
+      "48. The local people like to sing folk songs and dance. You can join them if you like.",
+      "49. If you miss the bus, please call me immediately. I will arrange another one for you.",
+      "50. I believe this trip will leave you a deep impression."
+    ]
+  },
 
-<h3>3. 全国导游基础知识</h3>
-<ul>
-<li>四大宗教：佛教、道教、伊斯兰教、基督教（核心教义+建筑）</li>
-<li>世界遗产、古典园林、传统民俗、朝代顺序</li>
-</ul>
+  // 三、笔试4科黄金关键词（只背得分点，不废话）
+  written-key:{
+    type:"html",
+    title:"笔试4科·黄金关键词（只背得分点，必考）",
+    html:`<div class="card">
+      <h3 style="color:#2563eb">1. 政策与法律法规（必考关键词）</h3>
+      <p><strong>核心法律：</strong>《旅游法》《导游管理办法》《消费者权益保护法》</p>
+      <p><strong>必考条款：</strong>
+        <br>• 导游不得擅自变更行程、不得强迫/诱导购物（罚款2000-20000元）
+        <br>• 游客投诉时效：90天（从知道或应当知道权利被侵害之日起）
+        <br>• 旅游安全：安全第一、预防为主（突发事件先救伤员）
+        <br>• 导游证：需持证上岗，不得出租、出借（罚款1000-3000元）
+      </p>
+      <p><strong>高频关键词：</strong>罚款金额、禁止行为、权责划分、投诉流程</p>
 
-<h3>4. 湖南导游基础知识（重中之重）</h3>
-<ul>
-<li>5大必考景点：韶山、张家界、南岳衡山、岳阳楼、凤凰古城</li>
-<li>湖南定位：红色旅游大省、中非经贸合作、非遗丰富</li>
-<li>重点记忆：5A景区、名人、地理、文化标签</li>
-</ul>
-<p style="font-weight:bold;margin-top:10px">笔试策略：刷真题＞看书，错题反复记，70分稳过</p>
-</div>`,
+      <h3 style="color:#2563eb; margin-top:20px">2. 导游业务（黄金得分点）</h3>
+      <p><strong>全流程关键词：</strong>接站（核对信息）→ 入住（确认房间）→ 行程（讲解服务）→ 送站（核对行李）</p>
+      <p><strong>高频应急（必考）：</strong>
+        <br>• 游客生病：立即休息 → 联系医护 → 上报旅行社 → 安抚其他游客
+        <br>• 游客走失：原地等候 → 联系领队/全陪 → 景区广播 → 报警（超过30分钟）
+        <br>• 物品丢失：安抚游客 → 协助查找（景区、酒店、车辆）→ 备案 → 必要时报警
+        <br>• 突发天气：暂停室外行程 → 转移至安全区域 → 调整行程
+      </p>
+      <p><strong>关键提醒：</strong>流程记顺序，应急记“先安抚、再处理、后上报”</p>
 
-shaoshan:`<h1>Shaoshan – Mao Zedong’s Former Residence</h1><div class="card">
-<p style="color:#555;margin-bottom:16px">韶山是毛泽东主席的故乡，也是中国红色旅游的圣地，位于湖南湘潭。</p>
-<hr>
-<p id="en">Dear guests,
-Welcome to Shaoshan, the birthplace of Chairman Mao Zedong and the holy land of red tourism in China.
+      <h3 style="color:#2563eb; margin-top:20px">3. 全国导游基础知识（只背重点）</h3>
+      <p><strong>四大宗教（必考）：</strong>
+        <br>• 佛教：创始人释迦牟尼，核心教义“因果、涅槃”，建筑：寺庙、佛塔
+        <br>• 道教：创始人老子，核心教义“道法自然”，建筑：道观、宫庙
+        <br>• 伊斯兰教：创始人穆罕默德，核心教义“唯一真主”，建筑：清真寺
+        <br>• 基督教：创始人耶稣，核心教义“博爱、救赎”，建筑：教堂
+      </p>
+      <p><strong>其他重点：</strong>
+        <br>• 世界遗产：中国56项（湖南4项：张家界、武陵源、崀山、土司遗址）
+        <br>• 古典园林：江南园林（苏州园林）、北方园林（颐和园）
+        <br>• 朝代顺序：夏→商→周→秦→汉→唐→宋→元→明→清（记口诀：夏商与西周，东周分两段）
+      </p>
 
-Shaoshan is located in Xiangtan, Hunan. It is famous for Mao Zedong’s Former Residence, which is a typical southern Chinese rural house. Inside, we can see simple furniture and daily items used by his family, showing a hardworking and plain life.
+      <h3 style="color:#2563eb; margin-top:20px">4. 湖南导游基础知识（重中之重，必考）</h3>
+      <p><strong>5大核心景点（必背）：</strong>韶山（红色）、张家界（自然）、衡山（宗教）、岳阳楼（文化）、凤凰（民俗）</p>
+      <p><strong>新增考点（常考）：</strong>
+        <br>• 岳麓山：岳麓书院（四大书院之一）、爱晚亭
+        <br>• 橘子洲：毛泽东青年雕塑、内陆最大洲
+        <br>• 东江湖：雾漫小东江、一级饮用水
+        <br>• 紫鹊界梯田：全球农业遗产、无坝引水
+      </p>
+      <p><strong>湖南定位关键词：</strong>红色旅游大省、中非经贸合作示范区、湖湘文化、非遗丰富（湘绣、花鼓戏）</p>
+      <p><strong>名人关键词：</strong>毛泽东（韶山）、范仲淹（岳阳楼记）、沈从文（凤凰）、曾国藩（湖南双峰）</p>
 
-We will also visit the Shaoshan Mao Zedong Memorial Hall, where many precious pictures and cultural relics show his great life and contributions to China.
+      <p style="font-weight:bold; color:#2563eb; margin-top:20px">笔试备考策略：刷真题＞看书，错题反复记，重点背关键词，70分稳过</p>
+    </div>`
+  },
 
-Shaoshan is not only a place of history, but also a place of spirit. It teaches us to cherish today’s peaceful life and remember the pioneers.
+  // 四、笔试题库（选择题+判断题，模拟考试，即时反馈）
+  written-test:{
+    type:"test",
+    title:"笔试题库（必考题型，做完即时反馈）",
+    questions:[
+      // 政策法规（5题）
+      {
+        type:"single",
+        question:"游客投诉旅游服务的时效是（ ）",
+        options:["A. 30天", "B. 60天", "C. 90天", "D. 120天"],
+        answer:"C",
+        hint:"核心考点：游客投诉时效为90天，从知道或应当知道权利被侵害之日起计算"
+      },
+      {
+        type:"single",
+        question:"导游擅自变更行程，可处以（ ）罚款",
+        options:["A. 500-1000元", "B. 2000-20000元", "C. 10000-50000元", "D. 50000-100000元"],
+        answer:"B",
+        hint:"核心考点：导游擅自变更行程、强迫购物，罚款2000-20000元"
+      },
+      {
+        type:"judge",
+        question:"导游可以出租、出借导游证，只要不影响服务质量即可（ ）",
+        answer:"错误",
+        hint:"核心考点：导游证不得出租、出借，违者罚款1000-3000元"
+      },
+      {
+        type:"single",
+        question:"旅游安全工作的基本原则是（ ）",
+        options:["A. 游客至上", "B. 安全第一、预防为主", "C. 服务优先", "D. 预防为辅、及时处理"],
+        answer:"B",
+        hint:"核心考点：旅游安全优先，坚持“安全第一、预防为主”"
+      },
+      {
+        type:"judge",
+        question:"《旅游法》规定，导游不得诱导、强迫游客购物或参加另行付费项目（ ）",
+        answer:"正确",
+        hint:"核心考点：这是《旅游法》明确禁止的行为，违者将被处罚"
+      },
+      // 导游业务（5题）
+      {
+        type:"single",
+        question:"游客在景区走失，导游首先应（ ）",
+        options:["A. 报警", "B. 原地等候并联系领队", "C. 通知旅行社", "D. 四处寻找"],
+        answer:"B",
+        hint:"应急流程：游客走失，先原地等候，再联系领队/全陪，超过30分钟再报警"
+      },
+      {
+        type:"single",
+        question:"导游接站时，首要工作是（ ）",
+        options:["A. 致欢迎词", "B. 核对游客信息（人数、姓名）", "C. 安排车辆", "D. 介绍行程"],
+        answer:"B",
+        hint:"接站流程：先核对游客信息，确认无误后再开展后续服务"
+      },
+      {
+        type:"judge",
+        question:"游客突发疾病，导游应立即带游客前往医院，无需上报旅行社（ ）",
+        answer:"错误",
+        hint:"应急流程：游客生病，先安抚、联系医护，同时上报旅行社"
+      },
+      {
+        type:"single",
+        question:"下列哪项不属于导游业务全流程（ ）",
+        options:["A. 接站", "B. 入住", "C. 购物", "D. 送站"],
+        answer:"C",
+        hint:"导游业务全流程：接站→核对→入住→行程→送站，购物不属于必走流程"
+      },
+      {
+        type:"judge",
+        question:"游客物品丢失，导游应先安抚游客，再协助查找（ ）",
+        answer:"正确",
+        hint:"应急原则：先安抚情绪，再处理问题，避免游客情绪激动"
+      },
+      // 全国导基（5题）
+      {
+        type:"single",
+        question:"下列不属于中国四大宗教的是（ ）",
+        options:["A. 佛教", "B. 道教", "C. 天主教", "D. 伊斯兰教"],
+        answer:"C",
+        hint:"核心考点：中国四大宗教：佛教、道教、伊斯兰教、基督教"
+      },
+      {
+        type:"single",
+        question:"苏州园林属于（ ）园林",
+        options:["A. 北方园林", "B. 江南园林", "C. 岭南园林", "D. 西北园林"],
+        answer:"B",
+        hint:"核心考点：江南园林以苏州园林为代表，北方园林以颐和园为代表"
+      },
+      {
+        type:"judge",
+        question:"中国目前有56项世界遗产，位居世界第一（ ）",
+        answer:"正确",
+        hint:"核心考点：中国世界遗产数量全球第一，湖南有4项世界遗产"
+      },
+      {
+        type:"single",
+        question:"道教的创始人是（ ）",
+        options:["A. 释迦牟尼", "B. 老子", "C. 穆罕默德", "D. 耶稣"],
+        answer:"B",
+        hint:"核心考点：道教创始人老子，佛教创始人释迦牟尼，伊斯兰教穆罕默德，基督教耶稣"
+      },
+      {
+        type:"judge",
+        question:"中国朝代顺序：夏→商→周→秦→汉→唐→宋→元→明→清（ ）",
+        answer:"正确",
+        hint:"记口诀：夏商与西周，东周分两段；春秋和战国，一统秦两汉；三分魏蜀吴，两晋前后延；南北朝并立，隋唐五代传；宋元明清后，王朝至此完"
+      },
+      // 湖南导基（5题）
+      {
+        type:"single",
+        question:"下列不属于湖南5大核心景点的是（ ）",
+        options:["A. 韶山", "B. 张家界", "C. 黄山", "D. 岳阳楼"],
+        answer:"C",
+        hint:"核心考点：湖南5大核心景点：韶山、张家界、衡山、岳阳楼、凤凰古城"
+      },
+      {
+        type:"single",
+        question:"岳麓书院属于中国古代四大书院之一，位于（ ）",
+        options:["A. 长沙", "B. 湘潭", "C. 衡阳", "D. 岳阳"],
+        answer:"A",
+        hint:"核心考点：岳麓书院位于长沙岳麓山，是中国四大书院之一"
+      },
+      {
+        type:"judge",
+        question:"凤凰古城因作家沈从文的《边城》而闻名（ ）",
+        answer:"正确",
+        hint:"核心考点：沈从文的《边城》以凤凰古城为背景，让其闻名世界"
+      },
+      {
+        type:"single",
+        question:"湖南被称为（ ），是红色旅游大省",
+        options:["A. 楚", "B. 湘", "C. 赣", "D. 粤"],
+        answer:"B",
+        hint:"核心考点：湖南简称“湘”，因湘江而得名"
+      },
+      {
+        type:"judge",
+        question:"紫鹊界梯田是全球重要农业文化遗产，以“无坝引水”闻名（ ）",
+        answer:"正确",
+        hint:"核心考点：紫鹊界梯田拥有2000多年历史，天然自流灌溉，无需修建堤坝"
+      }
+    ]
+  },
 
-Thank you for listening.</p>
-</div>
-<button class="copy-btn" onclick="copy()">复制英文导游词</button>`,
-
-zhangjiajie:`<h1>Zhangjiajie</h1><div class="card">
-<p style="color:#555;margin-bottom:16px">张家界是世界自然遗产，以独特的石英砂岩峰林地貌闻名，也是《阿凡达》灵感来源地。</p>
-<hr>
-<p id="en">Dear guests,
-Today we are going to visit Zhangjiajie, a world-famous scenic spot and a UNESCO World Natural Heritage Site.
-
-Zhangjiajie is known for its unique quartz sandstone peaks. Thousands of tall, steep mountains stand straight into the sky, just like a fairyland on earth. It is so amazing that it even inspired the movie Avatar.
-
-We will visit beautiful places such as Tianmen Mountain with its natural arch, and the quiet Golden Whip Stream. You can enjoy fresh air, green forests and fantastic views here.
-
-Zhangjiajie is also home to the Tujia ethnic group, who have their own special culture, songs and dances.
-
-I believe you will deeply love this magical and beautiful place.</p>
-</div>
-<button class="copy-btn" onclick="copy()">复制英文导游词</button>`,
-
-hengshan:`<h1>Mount Heng (Southern Sacred Mountain)</h1><div class="card">
-<p style="color:#555;margin-bottom:16px">衡山为五岳之一的南岳，位于衡阳，风光秀丽，宗教文化底蕴深厚。</p>
-<hr>
-<p id="en">Dear guests,
-We are now visiting Mount Heng, one of China’s Five Great Mountains, known as the Southern Sacred Mountain. It is located in Hengyang, Hunan.
-
-Mount Heng is famous for its beautiful scenery and profound religious culture. It has a long history of Buddhism and Taoism. Many temples and ancient buildings are hidden among green mountains.
-
-The highest point is Zhurong Peak. From the top, we can enjoy a wonderful view of clouds and mountains around. The climate here is mild, so it is beautiful in all four seasons.
-
-For hundreds of years, many scholars and visitors came here to admire the scenery and pray for blessings.
-
-I hope you enjoy the peaceful and sacred atmosphere of Mount Heng.</p>
-</div>
-<button class="copy-btn" onclick="copy()">复制英文导游词</button>`,
-
-yueyang:`<h1>Yueyang Tower</h1><div class="card">
-<p style="color:#555;margin-bottom:16px">岳阳楼是江南三大名楼之一，临洞庭湖，因范仲淹《岳阳楼记》名扬天下。</p>
-<hr>
-<p id="en">Dear guests,
-Now we are at Yueyang Tower, one of the Three Great Towers along the Yangtze River.
-
-Yueyang Tower has a long history and unique architectural style. It stands by Dongting Lake, with a beautiful view of water and sky.
-
-It is famous for Memorial to Yueyang Tower written by Fan Zhongyan. The most famous sentence is “Be the first to worry about the troubles of the country, and the last to enjoy its happiness”. This spirit has influenced Chinese people for hundreds of years.
-
-Standing here, you can feel the combination of natural scenery and traditional culture.
-
-Thank you.</p>
-</div>
-<button class="copy-btn" onclick="copy()">复制英文导游词</button>`,
-
-fenghuang:`<h1>Fenghuang Ancient Town</h1><div class="card">
-<p style="color:#555;margin-bottom:16px">凤凰古城位于湘西，沱江穿城而过，吊脚楼风貌独特，民族风情浓郁。</p>
-<hr>
-<p id="en">Dear guests,
-Welcome to Fenghuang Ancient Town, a beautiful and peaceful town in western Hunan.
-
-Fenghuang is famous for its well-preserved ancient buildings, clear Tuojiang River and stilted houses. It is a place full of traditional culture of Tujia and Miao ethnic groups.
-
-Walking along the old streets, you can see small bridges, flowing water, local snacks and handicrafts. The town is also connected with the famous writer Shen Congwen, who wrote many beautiful stories about this place.
-
-Fenghuang is like a quiet painting, simple and charming.
-
-I hope you have a pleasant and unforgettable time here.</p>
-</div>
-<button class="copy-btn" onclick="copy()">复制英文导游词</button>`,
-
-interview:`<h1>面试·英文问答精简模板</h1><div class="card" id="en">
-<div style="margin-bottom:20px">
-<h3>欢迎与欢送</h3>
-<p>1. Good morning/afternoon, dear guests. Welcome to Hunan. I’m your tour guide today.</p>
-<p>2. I hope you have a wonderful and safe trip in Hunan.</p>
-<p>3. Thank you for your support and understanding. Wish you a pleasant journey home.</p>
-</div>
-
-<div style="margin-bottom:20px">
-<h3>景点介绍</h3>
-<p>4. This is one of the most famous scenic spots in Hunan.</p>
-<p>5. It has a long history and rich culture.</p>
-<p>6. It is famous for its beautiful natural scenery.</p>
-</div>
-
-<div style="margin-bottom:20px">
-<h3>行程与服务</h3>
-<p>7. Today we will visit several places. Please follow me.</p>
-<p>8. Please stay together and do not leave the group alone.</p>
-<p>9. If you have any questions, you can ask me at any time.</p>
-<p>10. Please take care of your belongings.</p>
-</div>
-
-<div style="margin-bottom:20px">
-<h3>餐饮住宿</h3>
-<p>11. We will have lunch at a local restaurant.</p>
-<p>12. The hotel is clean and comfortable.</p>
-<p>13. If you need any help, please call me.</p>
-</div>
-
-<div style="margin-bottom:20px">
-<h3>安全与应急</h3>
-<p>14. Please pay attention to your safety.</p>
-<p>15. Please be careful when you walk on the road.</p>
-<p>16. Don’t worry. I will help you.</p>
-<p>17. Please stay calm. I will call for help.</p>
-</div>
-
-<div style="margin-bottom:20px">
-<h3>文化与风俗</h3>
-<p>18. This is a traditional Chinese custom.</p>
-<p>19. Local people are very friendly and warm.</p>
-<p>20. It shows the wisdom of local people.</p>
-</div>
-
-<div style="margin-bottom:20px">
-<h3>湖南特色</h3>
-<p>21. Hunan is famous for red tourism.</p>
-<p>22. Hunan food is a little spicy but very delicious.</p>
-<p>23. Hunan has many beautiful mountains and rivers.</p>
-</div>
-
-<div style="margin-bottom:20px">
-<h3>常用应答</h3>
-<p>24. Thank you for your question.</p>
-<p>25. Let me tell you about it.</p>
-<p>26. That’s a good question.</p>
-<p>27. I’m glad you like it.</p>
-<p>28. Hope you have a good time.</p>
-<p>29. See you next time.</p>
-<p>30. Welcome to Hunan again.</p>
-</div>
-</div>
-<button class="copy-btn" onclick="copy()">复制全部问答模板</button>`,
-
-words:`<h1>旅游高频口译词汇（汉英对照）</h1><div class="card">
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;line-height:1.8">
-<div>导游 tour guide</div>
-<div>游客 tourist / visitor</div>
-<div>景点 scenic spot</div>
-<div>红色旅游 red tourism</div>
-<div>世界遗产 World Heritage</div>
-<div>自然景观 natural scenery</div>
-<div>文化古迹 cultural relic</div>
-<div>历史悠久 with a long history</div>
-<div>少数民族 ethnic group</div>
-<div>酒店 hotel</div>
-<div>餐厅 restaurant</div>
-<div>门票 entrance ticket</div>
-<div>安全 safety</div>
-<div>交通 transportation</div>
-<div>行李 luggage</div>
-<div>天气 weather</div>
-<div>风景 view / scenery</div>
-<div>传统 tradition</div>
-<div>民俗 custom</div>
-<div>祝福 blessing</div>
-</div>
-</div>`
+  // 五、高频口译词汇（保留原有，优化排版）
+  words:{
+    type:"html",
+    title:"高频口译词汇（汉英对照，面试必背）",
+    html:`<div class="card">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;line-height:1.8">
+        <div>导游 tour guide</div>
+        <div>游客 tourist / visitor</div>
+        <div>景点 scenic spot</div>
+        <div>红色旅游 red tourism</div>
+        <div>世界遗产 World Heritage</div>
+        <div>自然景观 natural scenery</div>
+        <div>文化古迹 cultural relic</div>
+        <div>历史悠久 with a long history</div>
+        <div>少数民族 ethnic group</div>
+        <div>酒店 hotel</div>
+        <div>餐厅 restaurant</div>
+        <div>门票 entrance ticket</div>
+        <div>安全 safety</div>
+        <div>交通 transportation</div>
+        <div>行李 luggage</div>
+        <div>天气 weather</div>
+        <div>风景 view / scenery</div>
+        <div>传统 tradition</div>
+        <div>民俗 custom</div>
+        <div>祝福 blessing</div>
+        <div>导游证 tour guide certificate</div>
+        <div>旅行社 travel agency</div>
+        <div>行程 itinerary</div>
+        <div>讲解 explanation</div>
+        <div>投诉 complaint</div>
+        <div>应急 emergency</div>
+        <div>医护人员 medical staff</div>
+        <div>纪念品 souvenir</div>
+        <div>湖湘文化 Huxiang culture</div>
+        <div>非遗 intangible cultural heritage</div>
+      </div>
+    </div>`
+  }
 };
 
-let now = "written";
-let rate = 1;
-let u = null;
+// 全局变量（保留原有功能：跟读、高亮、隐藏等）
+let curPage = "shaoshan";
+let speed = 1;
+let loop = true;
+let hideZH = false;
+let hideEN = false;
+let curLine = 0;
+let utter = null;
+let isPlaying = false;
+let curQuestion = 0; // 题库当前题目索引
 
-function show(){document.getElementById("view").innerHTML=data[now]}
-show();
-
-document.querySelectorAll(".menu-list button").forEach(b=>{
-  b.onclick=()=>{
-    document.querySelectorAll(".menu-list button").forEach(x=>x.classList.remove("active"))
-    b.classList.add("active")
-    now = b.dataset.page
-    show()
+// 渲染页面（适配所有类型：导游词、问答、关键词、题库）
+function render(){
+  let d = data[curPage];
+  let html = `<div class='title'>${d.title}</div>`;
+  
+  // 1. 导游词（中英文逐句对照）
+  if(d.type === "dual"){
+    html += "<div class='card'>";
+    d.lines.forEach((line,i)=>{
+      html += `<div class='line ${i===curLine&&isPlaying?"active":""}' onclick='jump(${i})'>
+        <div class='zh ${hideZH?"hide":""}'>${line.zh}</div>
+        <div class='en ${hideEN?"hide":""}'>${line.en}</div>
+      </div>`;
+    });
+    html += "</div>";
   }
-})
 
+  // 2. 面试问答（50题，可随机抽题）
+  else if(d.type === "qa"){
+    html += "<div class='card qa'>";
+    d.lines.forEach((line,i)=>{
+      html += `<p class='${i===curLine&&isPlaying?"active":""}' onclick='jump(${i})'>${line}</p>`;
+    });
+    html += "</div>";
+  }
+
+  // 3. 笔试关键词/词汇（静态HTML）
+  else if(d.type === "html"){
+    html += d.html;
+  }
+
+  // 4. 笔试题库（选择题+判断题，即时反馈）
+  else if(d.type === "test"){
+    let q = d.questions[curQuestion];
+    html += "<div class='card'>";
+    html += `<div class='question'>
+      <p>${curQuestion+1}/${d.questions.length}：${q.question}</p>
+    `;
+    // 单选题
+    if(q.type === "single"){
+      q.options.forEach((opt, idx)=>{
+        let optionLetter = String.fromCharCode(65 + idx);
+        html += `<div class='option' onclick='checkAnswer("${optionLetter}")'>${optionLetter}. ${opt}</div>`;
+      });
+    }
+    // 判断题
+    else if(q.type === "judge"){
+      html += `<div class='option' onclick='checkAnswer("正确")'>正确</div>`;
+      html += `<div class='option' onclick='checkAnswer("错误")'>错误</div>`;
+    }
+    // 答案提示（初始隐藏）
+    html += `<div class='answer-hint' id='hint' style='display:none'></div>`;
+    html += `</div>`;
+    // 下一题按钮
+    html += `<button class='btn-next' onclick='nextQuestion()'>下一题</button>`;
+  }
+
+  document.getElementById("app").innerHTML = html;
+}
+
+// 播放功能（保留逐句高亮、跟读）
 function play(){
-  window.speechSynthesis.cancel()
-  const t = document.getElementById("en")
-  if(!t){alert("当前页面无英文朗读内容");return}
-  u = new SpeechSynthesisUtterance(t.innerText)
-  u.lang="en-US"
-  u.rate=rate
-  window.speechSynthesis.speak(u)
+  let d = data[curPage];
+  if(!d.lines && d.type !== "dual" && d.type !== "qa"){
+    alert("当前页面不支持朗读");
+    return;
+  }
+  stop();
+  isPlaying = true;
+  render();
+  if(d.type === "dual") speakLine(d.lines[curLine].en);
+  if(d.type === "qa") speakLine(d.lines[curLine]);
 }
 
-function stop(){window.speechSynthesis.cancel()}
-function speed(s){rate=s}
-function copy(){
-  const t = document.getElementById("en")
-  if(!t)return
-  navigator.clipboard.writeText(t.innerText).then(()=>alert("复制成功"))
+function speakLine(text){
+  utter = new SpeechSynthesisUtterance(text);
+  utter.lang = "en-US";
+  utter.rate = speed;
+  utter.onend = ()=>{
+    curLine++;
+    if(curLine >= data[curPage].lines.length){
+      curLine = 0;
+      if(!loop){
+        isPlaying = false;
+        render();
+        return;
+      }
+    }
+    render();
+    play();
+  };
+  window.speechSynthesis.speak(utter);
 }
+
+// 停止播放
+function stop(){
+  window.speechSynthesis.cancel();
+  isPlaying = false;
+  curLine = 0;
+  render();
+}
+
+// 设置语速
+function setSpeed(s){
+  speed = s;
+}
+
+// 切换循环模式
+function toggleLoop(){
+  loop = !loop;
+  alert("循环模式：" + (loop ? "开启" : "关闭"));
+}
+
+// 显示/隐藏中文
+function toggleZH(){
+  hideZH = !hideZH;
+  render();
+}
+
+// 显示/隐藏英文
+function toggleEN(){
+  hideEN = !hideEN;
+  render();
+}
+
+// 跳转到指定句子/题目
+function jump(i){
+  curLine = i;
+  if(isPlaying) play();
+  else render();
+}
+
+// 随机抽题（面试问答/题库）
+function randomQuestion(){
+  let d = data[curPage];
+  if(d.type === "qa"){
+    curLine = Math.floor(Math.random() * d.lines.length);
+    render();
+  }else if(d.type === "test"){
+    curQuestion = Math.floor(Math.random() * d.questions.length);
+    render();
+  }else{
+    alert("当前页面不支持随机抽题");
+  }
+}
+
+// 题库：检查答案
+function checkAnswer(userAnswer){
+  let q = data[curPage].questions[curQuestion];
+  let options = document.querySelectorAll(".option");
+  options.forEach(opt => {
+    if(opt.textContent.startsWith(q.answer)){
+      opt.classList.add("correct");
+    }else if(opt.textContent.startsWith(userAnswer) && userAnswer !== q.answer){
+      opt.classList.add("wrong");
+    }
+  });
+  // 显示答案提示
+  document.getElementById("hint").style.display = "block";
+  document.getElementById("hint").textContent = q.hint;
+}
+
+// 题库：下一题
+function nextQuestion(){
+  let d = data[curPage];
+  curQuestion++;
+  if(curQuestion >= d.questions.length){
+    curQuestion = 0;
+    alert("已完成所有题目，重新开始！");
+  }
+  render();
+}
+
+// 菜单切换
+document.querySelectorAll(".menu button").forEach(b=>{
+  b.addEventListener("click",()=>{
+    document.querySelectorAll(".menu button").forEach(x=>x.classList.remove("active"));
+    b.classList.add("active");
+    curPage = b.dataset.page;
+    curLine = 0;
+    curQuestion = 0;
+    isPlaying = false;
+    render();
+  });
+});
+
+// 初始化页面
+render();
 </script>
 </body>
 </html>
